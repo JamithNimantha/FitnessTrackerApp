@@ -30,12 +30,30 @@ namespace FitnessTrackerApp.Service
 
         public List<WeightEntry> FindWeightEntriesInAscByUserName(string UserName)
         {
-            return (List<WeightEntry>) GetWeightEntries().Where(obj => obj.UserName.Equals(UserName)).OrderBy(obj => obj.Date);
+            return GetWeightEntries()
+                .Where(obj => obj.UserName.Equals(UserName))
+                .OrderBy(obj => obj.Date)
+                .ToList();
         }
 
-        public List<WeightEntry> FindUFindWeightEntriesInDescByUserName(string UserName)
+        public List<WeightEntry> FindWeightEntriesInDescByUserName(string UserName)
         {
-            return (List<WeightEntry>) GetWeightEntries().Where(obj => obj.UserName.Equals(UserName)).OrderByDescending(obj => obj.Date);
+
+            return GetWeightEntries()
+                .Where(obj => obj.UserName.Equals(UserName))
+                .OrderByDescending(obj => obj.Date)
+                .ToList();
+        }
+
+        public WeightEntry FindLatestWeightEntryForUser(string UserName)
+        {
+            List<WeightEntry> weightEntries = GetWeightEntries();
+            if (weightEntries.Count == 0)
+            {
+                return new WeightEntry();
+            }
+
+            return weightEntries.Where(obj => obj.UserName.Equals(UserName)).OrderByDescending(obj => obj.Date).First();
         }
 
         public WeightEntry GetWeightEntryByGUID(List<WeightEntry> WeightEntries, string GUID)
@@ -69,10 +87,10 @@ namespace FitnessTrackerApp.Service
             
         }
 
-        public WeightEntry UpdateUser(WeightEntry Entry)
+        public WeightEntry UpdateEntry(WeightEntry Entry, string GUID)
         {
             List<WeightEntry> WeightEntries = GetWeightEntries();
-            var WeightEntry = GetWeightEntryByGUID(WeightEntries, Entry.GUID);
+            var WeightEntry = GetWeightEntryByGUID(WeightEntries, GUID);
             if (WeightEntry != null)
             {
                 WeightEntry.Weight = Entry.Weight;
@@ -81,7 +99,7 @@ namespace FitnessTrackerApp.Service
             }
             else
             {
-                throw new RecordNotFoundExeption(Entry.GUID);
+                throw new RecordNotFoundExeption(GUID);
             }
             return Entry;
         }

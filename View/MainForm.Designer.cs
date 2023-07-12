@@ -33,11 +33,11 @@
             this.tabWorkout = new System.Windows.Forms.TabPage();
             this.tabCheatMeal = new System.Windows.Forms.TabPage();
             this.tabProfile = new System.Windows.Forms.TabPage();
-            this.profileForm = new FitnessTrackerApp.View.ProfileForm(this._userName);
-            this.profileForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLogout = new System.Windows.Forms.Button();
+            this.tabWeight = new System.Windows.Forms.TabPage();
+            this.tabReport = new System.Windows.Forms.TabPage();
+            this.tabPrediction = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
-            this.tabProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -45,6 +45,9 @@
             this.tabControl1.Controls.Add(this.tabDashboard);
             this.tabControl1.Controls.Add(this.tabWorkout);
             this.tabControl1.Controls.Add(this.tabCheatMeal);
+            this.tabControl1.Controls.Add(this.tabWeight);
+            this.tabControl1.Controls.Add(this.tabReport);
+            this.tabControl1.Controls.Add(this.tabPrediction);
             this.tabControl1.Controls.Add(this.tabProfile);
             this.tabControl1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
@@ -86,22 +89,12 @@
             // 
             // tabProfile
             // 
-            this.tabProfile.Controls.Add(this.profileForm);
             this.tabProfile.Location = new System.Drawing.Point(4, 25);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Size = new System.Drawing.Size(1105, 592);
             this.tabProfile.TabIndex = 3;
             this.tabProfile.Text = "Profile";
-            this.tabProfile.UseVisualStyleBackColor = true;
-            // 
-            // profileForm
-            // 
-            this.profileForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileForm.Location = new System.Drawing.Point(0, 0);
-            this.profileForm.Name = "profileForm";
-            this.profileForm.Size = new System.Drawing.Size(1105, 592);
-            this.profileForm.TabIndex = 0;
-            this.profileForm.Load += new System.EventHandler(this.profileForm_Load);
+            this.tabProfile.UseVisualStyleBackColor = true;            
             // 
             // btnLogout
             // 
@@ -114,6 +107,33 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // tabWeight
+            // 
+            this.tabWeight.Location = new System.Drawing.Point(4, 25);
+            this.tabWeight.Name = "tabWeight";
+            this.tabWeight.Size = new System.Drawing.Size(1105, 592);
+            this.tabWeight.TabIndex = 4;
+            this.tabWeight.Text = "Weight";
+            this.tabWeight.UseVisualStyleBackColor = true;
+            // 
+            // tabReport
+            // 
+            this.tabReport.Location = new System.Drawing.Point(4, 25);
+            this.tabReport.Name = "tabReport";
+            this.tabReport.Size = new System.Drawing.Size(1105, 592);
+            this.tabReport.TabIndex = 5;
+            this.tabReport.Text = "Reports";
+            this.tabReport.UseVisualStyleBackColor = true;
+            // 
+            // tabPrediction
+            // 
+            this.tabPrediction.Location = new System.Drawing.Point(4, 25);
+            this.tabPrediction.Name = "tabPrediction";
+            this.tabPrediction.Size = new System.Drawing.Size(1105, 592);
+            this.tabPrediction.TabIndex = 6;
+            this.tabPrediction.Text = "Prediction";
+            this.tabPrediction.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -124,10 +144,10 @@
             this.Name = "MainForm";
             this.Text = "Personal Fitness Tracker App";
             this.tabControl1.ResumeLayout(false);
-            this.tabProfile.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
+
 
         #endregion
 
@@ -137,6 +157,8 @@
         private System.Windows.Forms.TabPage tabCheatMeal;
         private System.Windows.Forms.TabPage tabProfile;
         private System.Windows.Forms.Button btnLogout;
-        private ProfileForm profileForm;
+        private System.Windows.Forms.TabPage tabWeight;
+        private System.Windows.Forms.TabPage tabReport;
+        private System.Windows.Forms.TabPage tabPrediction;
     }
 }
