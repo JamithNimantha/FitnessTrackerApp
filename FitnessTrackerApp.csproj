@@ -53,19 +53,47 @@
     <Compile Include="Exceptions\RecordNotFoundExeption.cs" />
     <Compile Include="Exceptions\UserNameAlreadyExistsExeption.cs" />
     <Compile Include="Exceptions\UserNameNotFoundException.cs" />
+    <Compile Include="Model\CheatMealEntry.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\WeightEntry.cs" />
+    <Compile Include="Model\WorkoutEntry.cs" />
+    <Compile Include="Service\CheatMealService.cs" />
     <Compile Include="Service\DataStorage.cs" />
     <Compile Include="Service\DataStore.cs" />
     <Compile Include="Service\WeightEntryService.cs" />
     <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\WorkoutService.cs" />
     <Compile Include="Utility\PasswordManager.cs" />
     <Compile Include="Utility\Util.cs" />
+    <Compile Include="View\CheatMealForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CheatMealForm.Designer.cs">
+      <DependentUpon>CheatMealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DashBoardForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DashBoardForm.Designer.cs">
+      <DependentUpon>DashBoardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PredictionForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PredictionForm.Designer.cs">
+      <DependentUpon>PredictionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SignUpForm.cs">
       <SubType>Form</SubType>
@@ -93,6 +121,15 @@
     <Compile Include="View\WeightEntryForm.Designer.cs">
       <DependentUpon>WeightEntryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\WorkoutForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\WorkoutForm.Designer.cs">
+      <DependentUpon>WorkoutForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\CheatMealForm.resx">
+      <DependentUpon>CheatMealForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\WeightEntryForm.resx">
       <DependentUpon>WeightEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WorkoutForm.resx">
+      <DependentUpon>WorkoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

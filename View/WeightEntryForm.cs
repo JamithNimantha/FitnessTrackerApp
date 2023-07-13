@@ -45,6 +45,20 @@ namespace FitnessTrackerApp.View
 
             var selectedRow = selectedRows[0];
             var guid = selectedRow.Cells[2].Value.ToString();
+            bool existsInWorkout = WorkoutService.Instance.CheckIfWeightEntryExistsInWorkout(guid);
+            if (existsInWorkout)
+            {
+                MessageBox.Show("This Weight Entry is used in a Workout. Please delete the Workout first!");
+                return;
+            }
+
+            bool existsInCheatMeal = CheatMealService.Instance.CheckIfWeightEntryExistsInCheatMeal(guid);
+            if (existsInCheatMeal)
+            {
+                MessageBox.Show("This Weight Entry is used in a Cheat Meal. Please delete the Cheat Meal first!");
+                return;
+            }
+            
             WeightEntryService.Instance.DeleteEntry(guid);
             dataGridViewWeightEntry.Rows.Remove(selectedRow);
             MessageBox.Show("Weight Entry Deleted Successfully!");

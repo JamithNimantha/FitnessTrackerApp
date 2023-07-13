@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabDashboard = new System.Windows.Forms.TabPage();
             this.tabWorkout = new System.Windows.Forms.TabPage();
             this.tabCheatMeal = new System.Windows.Forms.TabPage();
-            this.tabProfile = new System.Windows.Forms.TabPage();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.tabWeight = new System.Windows.Forms.TabPage();
             this.tabReport = new System.Windows.Forms.TabPage();
             this.tabPrediction = new System.Windows.Forms.TabPage();
+            this.tabProfile = new System.Windows.Forms.TabPage();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabDashboard);
             this.tabControl1.Controls.Add(this.tabWorkout);
             this.tabControl1.Controls.Add(this.tabCheatMeal);
             this.tabControl1.Controls.Add(this.tabWeight);
@@ -55,18 +53,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1113, 621);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabDashboard
-            // 
-            this.tabDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabDashboard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDashboard.Location = new System.Drawing.Point(4, 25);
-            this.tabDashboard.Name = "tabDashboard";
-            this.tabDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDashboard.Size = new System.Drawing.Size(1105, 592);
-            this.tabDashboard.TabIndex = 0;
-            this.tabDashboard.Text = "Dashboard";
-            this.tabDashboard.UseVisualStyleBackColor = true;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabWorkout
             // 
@@ -86,26 +73,6 @@
             this.tabCheatMeal.TabIndex = 2;
             this.tabCheatMeal.Text = "Cheat Meal";
             this.tabCheatMeal.UseVisualStyleBackColor = true;
-            // 
-            // tabProfile
-            // 
-            this.tabProfile.Location = new System.Drawing.Point(4, 25);
-            this.tabProfile.Name = "tabProfile";
-            this.tabProfile.Size = new System.Drawing.Size(1105, 592);
-            this.tabProfile.TabIndex = 3;
-            this.tabProfile.Text = "Profile";
-            this.tabProfile.UseVisualStyleBackColor = true;            
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.Location = new System.Drawing.Point(1039, -2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 25);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // tabWeight
             // 
@@ -134,6 +101,26 @@
             this.tabPrediction.Text = "Prediction";
             this.tabPrediction.UseVisualStyleBackColor = true;
             // 
+            // tabProfile
+            // 
+            this.tabProfile.Location = new System.Drawing.Point(4, 25);
+            this.tabProfile.Name = "tabProfile";
+            this.tabProfile.Size = new System.Drawing.Size(1105, 592);
+            this.tabProfile.TabIndex = 3;
+            this.tabProfile.Text = "Profile";
+            this.tabProfile.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.Location = new System.Drawing.Point(1039, -2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 25);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -152,7 +139,6 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabDashboard;
         private System.Windows.Forms.TabPage tabWorkout;
         private System.Windows.Forms.TabPage tabCheatMeal;
         private System.Windows.Forms.TabPage tabProfile;

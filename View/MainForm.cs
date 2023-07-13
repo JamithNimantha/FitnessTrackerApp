@@ -12,6 +12,54 @@ namespace FitnessTrackerApp.View
             InitializeComponent();
             LoadProfileTab();
             LoadWeightEntryTab();
+            LoadWorkoutEntryTab();
+            LoadCheatMealEntryTab();
+            LoadReportTab();
+            LoadPredictionTab();
+        }
+
+        private void LoadPredictionTab()
+        {
+            var Form = new PredictionForm(this._userName);
+            Form.Dock = System.Windows.Forms.DockStyle.Fill;
+            Form.Location = new System.Drawing.Point(0, 0);
+            Form.Name = "PredictionForm";
+            Form.Size = new System.Drawing.Size(1105, 592);
+            Form.TabIndex = 0;
+            this.tabPrediction.Controls.Add(Form);
+        }
+
+        private void LoadReportTab()
+        {
+            var Form = new ReportForm(this._userName);
+            Form.Dock = System.Windows.Forms.DockStyle.Fill;
+            Form.Location = new System.Drawing.Point(0, 0);
+            Form.Name = "ReportForm";
+            Form.Size = new System.Drawing.Size(1105, 592);
+            Form.TabIndex = 0;
+            this.tabReport.Controls.Add(Form);
+        }
+
+        private void LoadCheatMealEntryTab()
+        {
+            var Form = new CheatMealForm(this._userName);
+            Form.Dock = System.Windows.Forms.DockStyle.Fill;
+            Form.Location = new System.Drawing.Point(0, 0);
+            Form.Name = "CheatMealForm";
+            Form.Size = new System.Drawing.Size(1105, 592);
+            Form.TabIndex = 0;
+            this.tabCheatMeal.Controls.Add(Form);
+        }
+
+        private void LoadWorkoutEntryTab()
+        {
+            var Form = new WorkoutForm(this._userName);
+            Form.Dock = System.Windows.Forms.DockStyle.Fill;
+            Form.Location = new System.Drawing.Point(0, 0);
+            Form.Name = "WorkoutForm";
+            Form.Size = new System.Drawing.Size(1105, 592);
+            Form.TabIndex = 0;
+            this.tabWorkout.Controls.Add(Form);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -51,5 +99,21 @@ namespace FitnessTrackerApp.View
 
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*TabControl tabControl = sender as TabControl;
+            TabPage currentTabPage = tabControl.SelectedTab;
+
+            Form form = currentTabPage.Controls[0] as Form;
+
+            if (form != null && form.GetType() == typeof(WorkoutForm))
+            {
+                WorkoutForm workoutForm = (WorkoutForm)form;
+                workoutForm.Clear(); // Assuming `Clear` is the correct method name in WorkoutForm
+            }*/
+
+
+
+        }
     }
 }

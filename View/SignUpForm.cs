@@ -111,12 +111,6 @@ namespace FitnessTrackerApp.View
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-
-
-
-
         }
     }
 }
