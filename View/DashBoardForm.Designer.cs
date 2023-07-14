@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // chart
+            // 
+            this.chart.Location = new System.Drawing.Point(45, 56);
+            this.chart.Name = "chart";
+            this.chart.Size = new System.Drawing.Size(992, 417);
+            this.chart.TabIndex = 0;
+            this.chart.Text = "chart";
+            this.chart.Click += new System.EventHandler(this.chart_Click);
+            // 
+            // DashBoardForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chart);
+            this.Name = "DashBoardForm";
+            this.Size = new System.Drawing.Size(1096, 631);
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
     }
 }

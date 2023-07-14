@@ -16,6 +16,18 @@ namespace FitnessTrackerApp.View
             LoadCheatMealEntryTab();
             LoadReportTab();
             LoadPredictionTab();
+            LoadDashboardTab();
+        }
+
+        private void LoadDashboardTab()
+        {
+            var Form = new DashBoardForm(this._userName);
+            Form.Dock = System.Windows.Forms.DockStyle.Fill;
+            Form.Location = new System.Drawing.Point(0, 0);
+            Form.Name = "DashBoardForm";
+            Form.Size = new System.Drawing.Size(1105, 592);
+            Form.TabIndex = 0;
+            this.tabDash.Controls.Add(Form);
         }
 
         private void LoadPredictionTab()

@@ -36,11 +36,13 @@
             this.tabPrediction = new System.Windows.Forms.TabPage();
             this.tabProfile = new System.Windows.Forms.TabPage();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.tabDash = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabDash);
             this.tabControl1.Controls.Add(this.tabWorkout);
             this.tabControl1.Controls.Add(this.tabCheatMeal);
             this.tabControl1.Controls.Add(this.tabWeight);
@@ -113,13 +115,22 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.Location = new System.Drawing.Point(1039, -2);
+            this.btnLogout.Location = new System.Drawing.Point(1029, -2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 25);
+            this.btnLogout.Size = new System.Drawing.Size(85, 28);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // tabDash
+            // 
+            this.tabDash.Location = new System.Drawing.Point(4, 25);
+            this.tabDash.Name = "tabDash";
+            this.tabDash.Size = new System.Drawing.Size(1105, 592);
+            this.tabDash.TabIndex = 7;
+            this.tabDash.Text = "Dashboard";
+            this.tabDash.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -146,5 +157,6 @@
         private System.Windows.Forms.TabPage tabWeight;
         private System.Windows.Forms.TabPage tabReport;
         private System.Windows.Forms.TabPage tabPrediction;
+        private System.Windows.Forms.TabPage tabDash;
     }
 }
