@@ -16,11 +16,10 @@ namespace FitnessTrackerApp
         [STAThread]
         static void Main()
         {
-            InitializeData();
+            //InitializeData();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-            Application.Run(new MainForm("jamith"));
+            Application.Run(new LoginForm());
         }
 
         static void InitializeData()
