@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enumeration\ReportType.cs" />
     <Compile Include="Enumeration\Gender.cs" />
     <Compile Include="Exceptions\RecordNotFoundExeption.cs" />
     <Compile Include="Exceptions\UserNameAlreadyExistsExeption.cs" />
@@ -61,7 +60,6 @@
     <Compile Include="Model\WorkoutEntry.cs" />
     <Compile Include="Service\CheatMealService.cs" />
     <Compile Include="Service\DataStorage.cs" />
-    <Compile Include="Service\DataStore.cs" />
     <Compile Include="Service\WeightEntryService.cs" />
     <Compile Include="Service\UserService.cs" />
     <Compile Include="Service\WorkoutService.cs" />

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FitnessTrackerApp.Enumeration
 {
-    public enum ReportType
+    public enum Gender
     {
-        WORKOUT,
-        CHEATMEAL
+        MALE,
+        FEMALE
     }
 }
